@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="120.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nut.stock.view.ConfirmationBoxController">
+   <children>
+      <Label fx:id="messageLabel" layoutX="132.0" layoutY="14.0" text="text">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Button fx:id="okButton" layoutX="84.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleOkButton" text="ตกลง" />
+      <Button fx:id="cancelButton" layoutX="170.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleCancelButton" text="ยกเลิก" />
+   </children>
+</AnchorPane>

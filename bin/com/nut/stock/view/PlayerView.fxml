@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nut.stock.view.PlayerViewController">
+   <children>
+      <Label layoutX="113.0" layoutY="14.0" text="เริ่ม">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label layoutX="101.0" layoutY="64.0" text="สิ้นสุด">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <ChoiceBox fx:id="startHourChoiceBox" accessibleRole="DATE_PICKER" layoutX="174.0" layoutY="18.0" prefWidth="50.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </ChoiceBox>
+      <ChoiceBox fx:id="startMinuteChoiceBox" layoutX="306.0" layoutY="18.0" prefHeight="0.0" prefWidth="50.0" />
+      <ChoiceBox fx:id="endHourChoiceBox" layoutX="174.0" layoutY="68.0" prefWidth="50.0" />
+      <ChoiceBox fx:id="endMinuteChoiceBox" layoutX="306.0" layoutY="68.0" prefWidth="50.0" />
+      <Label layoutX="239.0" layoutY="17.0" text="นาฬิกา">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="239.0" layoutY="67.0" text="นาฬิกา">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="17.0" text="นาที">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="369.0" layoutY="67.0" text="นาที">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="playerTable" layoutX="15.0" layoutY="105.0" prefHeight="209.0" prefWidth="734.0">
+         <columns>
+            <TableColumn fx:id="playerNumColumn" prefWidth="56.0" resizable="false" text="ลำดับ" />
+            <TableColumn fx:id="nameColumn" prefWidth="85.0" resizable="false" text="ชื่อ" />
+            <TableColumn fx:id="playAllDayColumn" prefWidth="76.0" text="เหมาวัน" />
+            <TableColumn fx:id="earlyQuitColumn" prefWidth="136.0" text="เลิกก่อน" />
+            <TableColumn fx:id="durationColumn" prefWidth="95.0" resizable="false" text="ระยะเวลา" />
+            <TableColumn fx:id="totalHourColumn" prefWidth="73.0" resizable="false" text="ช่วงเวลา" />
+            <TableColumn fx:id="discountColumn" prefWidth="76.0" resizable="false" text="ส่วนลด" />
+            <TableColumn fx:id="costColumn" prefWidth="76.0" resizable="false" text="ราคา" />
+            <TableColumn fx:id="paidColumn" prefWidth="58.0" resizable="false" text="จ่ายแล้ว" />
+         </columns>
+      </TableView>
+      <Label layoutX="47.0" layoutY="418.0" text="ราคา">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalCostLabel" layoutX="108.0" layoutY="418.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="456.0" text="เหลืออีก">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="moneyLeftLabel" layoutX="108.0" layoutY="456.0" text="0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <CheckBox disable="true" layoutX="537.0" layoutY="335.0" mnemonicParsing="false" text="จ่ายหมดแล้ว" />
+      <Button layoutX="174.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleAddButton" text="เพิ่ม" />
+      <Button fx:id="deleteButton" layoutX="224.0" layoutY="444.0" mnemonicParsing="false" onAction="#handleDeleteButton" text="ลบ" />
+      <Button layoutX="351.0" layoutY="457.0" mnemonicParsing="false" onAction="#handleBackButton" text="กลับ" />
+      <Label fx:id="titleLabel" layoutX="459.0" layoutY="443.0" text="title">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

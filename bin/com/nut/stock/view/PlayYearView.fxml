@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="600.0" maxWidth="600.0" minHeight="600.0" minWidth="600.0" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.nut.stock.view.PlayYearViewController">
+   <children>
+      <SplitPane dividerPositions="0.6187290969899666" orientation="VERTICAL" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="538.0" prefWidth="800.0">
+               <children>
+                  <TableView fx:id="playYearTable" prefHeight="497.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="yearColumn" prefWidth="96.0" text="ปี" />
+                        <TableColumn prefWidth="501.0" text="รายละเอียด">
+                           <columns>
+                            <TableColumn fx:id="costColumn" prefWidth="106.0" text="ราคา" />
+                              <TableColumn fx:id="totalPlayerColumn" prefWidth="94.0" text="ผู้เล่น" />
+                              <TableColumn fx:id="totalHourColumn" prefWidth="116.0" text="ชั่วโมง" />
+                              <TableColumn fx:id="paidColumn" prefWidth="72.0" text="จ่ายแล้ว" />
+                           </columns>
+                        </TableColumn>
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button fx:id="viewButton" layoutX="288.0" layoutY="186.0" mnemonicParsing="false" onAction="#handleViewButton" text="ดู" />
+               </children></AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

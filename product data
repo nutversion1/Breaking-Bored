@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<products>
+    <product>
+        <name>นิชชิน</name>
+        <total>20</total>
+    </product>
+    <product>
+        <name>นิชชินหมูมะนาว </name>
+        <total>10</total>
+    </product>
+    <product>
+        <name>หห</name>
+        <total>2</total>
+    </product>
+</products>
